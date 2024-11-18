@@ -19,10 +19,10 @@ build:
 requirements:
   host:
     - pip
-    - python >={{ python_min }},<{{ python_max }}}
+    - python >={{ python_min }},<{{ python_max }}
     - poetry-core >=1.0.0
   run:
-    - python >={{ python_min }},<{{ python_max }}}
+    - python >={{ python_min }},<{{ python_max }}
     - dask-core 2022.10.*
     - discretize >=0.10.0,<0.11.0
     - distributed 2022.10.*
@@ -58,7 +58,7 @@ test:
     - pytest tests/version_test.py
     - pip list
   requires:
-    - python >={{ python_min }},<{{ python_max }}}
+    - python >={{ python_min }},<{{ python_max }}
     - pip
     - pytest
     - tomli
