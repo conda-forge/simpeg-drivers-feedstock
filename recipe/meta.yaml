@@ -1,5 +1,7 @@
 {% set name = "simpeg-drivers" %}
 {% set version = "0.1.1" %}
+{% set python_min = 3.10 %}
+{% set python_max = 3.11 %}
 
 package:
   name: {{ name|lower }}
@@ -17,10 +19,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.10,<3.11
+    - python >={{ python_min }},<{{ python_max }}}
     - poetry-core >=1.0.0
   run:
-    - python >=3.10,<3.11
+    - python >={{ python_min }},<{{ python_max }}}
     - dask-core 2022.10.*
     - discretize >=0.10.0,<0.11.0
     - distributed 2022.10.*
@@ -56,6 +58,7 @@ test:
     - pytest tests/version_test.py
     - pip list
   requires:
+    - python >={{ python_min }},<{{ python_max }}}
     - pip
     - pytest
     - tomli
