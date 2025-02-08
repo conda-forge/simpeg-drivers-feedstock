@@ -1,6 +1,6 @@
 {% set name = "simpeg-drivers" %}
-{% set version = "0.1.1" %}
-{% set python_min = 3.10 %}
+{% set version = "0.2.0" %}
+{% set python_min = 3.1 %}
 {% set python_max = 3.11 %}
 
 package:
@@ -8,13 +8,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/MiraGeoscience/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 4a23457f414da43b67324a9d11dfcff1d18ae33fc2f7bf2e22af427d0ed4750b
+  url: https://github.com/MiraGeoscience/{{ name }}/archive/v{{ version }}.zip
+  sha256: 7b4cff696ebf8535f4cc977a4c15d0ba39fb0215b6ef389ce39c952171fe65dd
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation 
-  number: 1
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   host:
