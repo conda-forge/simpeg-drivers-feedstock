@@ -19,7 +19,7 @@ build:
 requirements:
   host:
     - pip
-    - python >={{ python_min }},<{{ python_max }}
+    - python {{ python_min }}
     - poetry-core >=1.0.0
   run:
     - python >={{ python_min }},<{{ python_max }}
@@ -56,7 +56,7 @@ test:
     - pytest tests/version_test.py
     - pip list
   requires:
-    - python >={{ python_min }},<{{ python_max }}
+    - python {{ python_min }}
     - pip
     - pytest
     - tomli
