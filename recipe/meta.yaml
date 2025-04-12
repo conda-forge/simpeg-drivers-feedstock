@@ -52,17 +52,14 @@ test:
   imports:
     - simpeg_drivers
   commands:
-    - pytest tests/version_test.py
-    - pip list
+    - pytest --ignore=tests/version_test.py
+    - pip check
   requires:
     - python {{ python_min }}
     - pip
     - pytest
-    - tomli
   source_files:
-    - tests/version_test.py
-    - pyproject.toml
-    - README.rst
+    - tests/
 
 about:
   home: https://www.mirageoscience.com/mining-industry-software/python-integration/
