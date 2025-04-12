@@ -33,7 +33,7 @@ requirements:
     - dask-core 2024.6.*
     - discretize >=0.10.0,<0.11.dev
     - distributed 2024.6.*
-    - numpy >=1.26.0,<1.25.dev
+    - numpy >=1.26.0,<1.27.dev
     - pydiso 0.1.0,<0.2.dev
     - scikit-learn >=1.4.0,<1.5.dev
     - scipy >=1.14.0,<1.15.dev
