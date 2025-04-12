@@ -68,8 +68,7 @@ about:
   home: https://www.mirageoscience.com/mining-industry-software/python-integration/
   summary: 'Application to run SimPEG inversions with geoh5 files from Geoscience Analyst.'
   license: MIT
-  license_file:
-    - LICENSE
+  license_file: LICENSE
   doc_url: https://mirageoscience-simpeg-drivers.readthedocs-hosted.com
   dev_url: https://github.com/MiraGeoscience/simpeg-drivers
 
