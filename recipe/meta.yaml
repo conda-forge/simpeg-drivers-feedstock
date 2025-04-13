@@ -41,10 +41,12 @@ requirements:
   run_constrained:
     - __glibc >=2.17
     # constrain version of dependencies from SimPEG
+    - empymod >=2.2.1,<2.3.dev
     - fsspec >=2022.0,<2023.0.dev
     - geoana >=0.5.0,<0.6.dev
     - matplotlib-base >=3.8.4,<3.9.dev
     - mkl >=2023.2,<2024.1
+    - python-mumps >=0.0.3,<0.0.4.dev
     - zarr >=2.14.2,<2.15.dev
 
 test:
@@ -62,6 +64,7 @@ test:
     - python {{ python_min }}
     - pip
     # - pytest
+    # - python-mumps = ">=0.0.3, <0.0.4.dev"
   # source_files:
   #   - tests/
 
