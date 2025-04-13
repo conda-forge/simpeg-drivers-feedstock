@@ -24,9 +24,9 @@ requirements:
   run:
     - python >={{ python_min }},<{{ python_max }}
     # Mira packages
-    - geoh5py >=0.10.0,<0.11.dev
+    - geoh5py >=0.10.1,<0.11.dev
     - geoapps-utils >=0.4.0,<0.5.dev
-    - mira-simpeg >=0.21.2.1,<0.21.2.2.dev
+    - mira-simpeg >=0.21.2.2,<0.21.3.dev
     - param-sweeps >=0.2.0,<0.3.dev
     - octree-creation-app >=0.2.0,<0.3.dev
     # direct dependencies
