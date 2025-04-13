@@ -54,6 +54,7 @@ requirements:
 
 tests:
   - python:
+      python_version: ${{ python_min }}.*
       imports:
         - simpeg_drivers
         - dask
@@ -61,8 +62,16 @@ tests:
         - geoh5py
         - simpeg
       pip_check: true
+  # TODO: select some test to run, not too heavy on memory for the conda-forge pipeline
+  # - script:
+  #     - pytest --ignore=tests/version_test.py
+  #   requirements:
+  #     run:
+  #       - pytest
+  #   files:
+  #     source:
+  #       - tests/
 
-      python_version: ${{ python_min }}.*
 about:
   summary: Application to run SimPEG inversions with geoh5 files from Geoscience Analyst.
   license: MIT
