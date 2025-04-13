@@ -1,0 +1,76 @@
+schema_version: 1
+
+context:
+  name: simpeg-drivers
+  version: 0.2.1
+  python_min: 3.10
+  python_max: 3.12
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/MiraGeoscience/${{ name }}/archive/v${{ version }}.tar.gz
+  sha256: f1273c970077e739d5932dfe26ab47792cff7be305936df755337b96b2d27e36
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - pip
+    - python 3.10.*
+    - poetry-core >=1.0.0
+  run:
+    - python >=${{ python_min }},<${{ python_max }}
+    # Mira packages
+    - geoh5py >=0.10.1,<0.11.dev
+    - geoapps-utils >=0.4.0,<0.5.dev
+    - mira-simpeg >=0.21.2.2,<0.21.3.dev
+    - param-sweeps >=0.2.0,<0.3.dev
+    - octree-creation-app >=0.2.0,<0.3.dev
+    # direct dependencies
+    - dask-core >=2024.6,<2024.7.dev
+    - discretize >=0.10.0,<0.11.dev
+    - distributed >=2024.6,<2024.7.dev
+    - numpy >=1.26.0,<1.27.dev
+    - scikit-learn >=1.4.0,<1.5.dev
+    - scipy >=1.14.0,<1.15.dev
+    - tqdm >=4.66.1,<5.0.0
+    # although one of pydiso or mumps is sufficient, list them both
+    - pydiso >=0.1.0,<0.2.dev
+    - python-mumps >=0.0.3,<0.0.4.dev
+  run_constraints:
+    - __glibc >=2.17
+    - empymod >=2.2.1,<2.3.dev
+    - fsspec >=2022.0,<2023.0.dev
+    - geoana >=0.5.0,<0.6.dev
+    - matplotlib-base >=3.8.4,<3.9.dev
+    - mkl >=2023.2,<2024.1
+    - zarr >=2.14.2,<2.15.dev
+
+tests:
+  - python:
+      imports:
+        - simpeg_drivers
+        - dask
+        - distributed
+        - geoh5py
+        - simpeg
+      pip_check: true
+
+      python_version: ${{ python_min }}.*
+about:
+  summary: Application to run SimPEG inversions with geoh5 files from Geoscience Analyst.
+  license: MIT
+  license_file: LICENSE
+  homepage: https://www.mirageoscience.com/mining-industry-software/python-integration/
+  repository: https://github.com/MiraGeoscience/simpeg-drivers
+  documentation: https://mirageoscience-simpeg-drivers.readthedocs-hosted.com
+
+extra:
+  recipe-maintainers:
+    - conda-forge/geoh5py
