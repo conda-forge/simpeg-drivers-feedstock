@@ -11,7 +11,7 @@ Summary: Application to run SimPEG inversions with geoh5 files from Geoscience A
 
 Development: https://github.com/MiraGeoscience/simpeg-drivers
 
-Documentation: https://mirageoscience-simpeg-drivers.readthedocs-hosted.com
+Documentation: https://mirageoscience-simpeg-drivers.readthedocs-hosted.com/
 
 Current build status
 ====================
