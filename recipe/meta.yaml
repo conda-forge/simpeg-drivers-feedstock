@@ -8,7 +8,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/MiraGeoscience/{{ name }}/archive/v{{ version }}.zip
+  url: https://github.com/MiraGeoscience/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: f1273c970077e739d5932dfe26ab47792cff7be305936df755337b96b2d27e36
 
 build:
