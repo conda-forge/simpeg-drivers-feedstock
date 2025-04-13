@@ -30,11 +30,11 @@ requirements:
     - param-sweeps >=0.2.0,<0.3.dev
     - octree-creation-app >=0.2.0,<0.3.dev
     # direct dependencies
-    - dask-core 2024.6.*
+    - dask-core >=2024.6,<2024.7.dev
     - discretize >=0.10.0,<0.11.dev
-    - distributed 2024.6.*
+    - distributed >=2024.6,<2024.7.dev
     - numpy >=1.26.0,<1.27.dev
-    - pydiso 0.1.0,<0.2.dev
+    - pydiso >=0.1.0,<0.2.dev
     - scikit-learn >=1.4.0,<1.5.dev
     - scipy >=1.14.0,<1.15.dev
     - tqdm >=4.66.1,<5.0.0
@@ -45,7 +45,7 @@ requirements:
     - zarr >=2.14.2,<2.15.dev
   run_constrained:
     - __glibc >=2.17
-    - fsspec 2022.*
+    - fsspec >=2022.0,<2023.0.dev
     - mkl >=2023.2,<2024.1
 
 test:
