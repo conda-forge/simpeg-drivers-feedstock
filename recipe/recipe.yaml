@@ -2,20 +2,20 @@ schema_version: 1
 
 context:
   name: simpeg-drivers
-  version: 0.2.1
-  python_min: 3.10
-  python_max: 3.12
+  version: "0.3.0"
+  python_min: '3.10'
+  python_max: '3.12'
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://github.com/MiraGeoscience/${{ name }}/archive/v${{ version }}.tar.gz
-  sha256: f1273c970077e739d5932dfe26ab47792cff7be305936df755337b96b2d27e36
+  url: https://github.com/MiraGeoscience/${{ name }}/archive/v${{ version }}.zip
+  sha256: 1f6d58aaba5c7fa939ac57d59d0cdb06beb2050011826f439e05d69edd535acc
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
