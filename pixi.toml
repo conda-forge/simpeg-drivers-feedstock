@@ -7,7 +7,7 @@
 
 [project]
 name = "simpeg-drivers-feedstock"
-version = "3.50.1"  # conda-smithy version used to generate this file
+version = "3.47.1"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/simpeg-drivers-feedstock"
 authors = ["@conda-forge/simpeg-drivers"]
 channels = ["conda-forge"]
