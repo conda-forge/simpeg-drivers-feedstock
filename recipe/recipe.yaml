@@ -27,30 +27,32 @@ requirements:
   run:
     - python >=${{ python_min }},<${{ python_max }}
     # Mira packages
-    - geoh5py >=0.10.1,<0.11.dev
-    - geoapps-utils >=0.4.0,<0.5.dev
-    - mira-simpeg >=0.21.2.2,<0.21.3.dev
-    - param-sweeps >=0.2.0,<0.3.dev
-    - octree-creation-app >=0.2.0,<0.3.dev
+    - geoapps-utils >=0.5.0, <0.6.dev
+    - geoh5py >=0.11.0, <0.12.dev
+    - mira-simpeg >=0.23.0.1, <0.23.1.dev
+    - octree-creation-app >=0.3.0, <0.4.dev
+    - param-sweeps >=0.2.1, <0.3.dev
     # direct dependencies
-    - dask-core >=2024.6,<2024.7.dev
-    - discretize >=0.10.0,<0.11.dev
-    - distributed >=2024.6,<2024.7.dev
-    - numpy >=1.26.0,<1.27.dev
-    - scikit-learn >=1.4.0,<1.5.dev
-    - scipy >=1.14.0,<1.15.dev
-    - tqdm >=4.66.1,<5.0.0
+    - dask-core >=2025.3, <2025.4.dev
+    - discretize >=0.11.0, <0.12.dev
+    - distributed >=2025.3, <2025.4.dev
+    - numpy >=1.26.0, <1.27.dev
+    - pydantic >=2.5.2, <3.0.dev
+    - scikit-learn >=1.4.0, <1.5.dev
+    - scipy >=1.14.0, <1.15.dev
+    - tqdm >=4.66.1, <5.0.dev
+    # constrain version for some indirect dependencies from SimPEG
+    - geoana >=0.7.0, <0.8.dev
+    - matplotlib-base >=3.8.4, <3.9.dev
+    - pymatsolver >=0.3.0, <0.4.dev
+    - zarr >=2.14.2, <2.15.dev
     # although one of pydiso or mumps is sufficient, list them both
     - pydiso >=0.1.0,<0.2.dev
     - python-mumps >=0.0.3,<0.0.4.dev
   run_constraints:
     - __glibc >=2.17
-    - empymod >=2.2.1,<2.3.dev
-    - fsspec >=2022.0,<2023.0.dev
-    - geoana >=0.5.0,<0.6.dev
-    - matplotlib-base >=3.8.4,<3.9.dev
-    - mkl >=2023.2,<2024.1
-    - zarr >=2.14.2,<2.15.dev
+    - bokeh >=3.6.0, <3.7.dev
+    - fsspec >=2022.0
 
 tests:
   - python:
